@@ -3,7 +3,7 @@
 }, */
 
 var recipes = {
-  'breakfast': 'cereal'
+  'breakfast': 'cereal' 
 }
 
 function updateObjectWithKeyAndValue(object, key, value) {
