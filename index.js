@@ -1,4 +1,4 @@
-var recipes = new Object()
+var recipes = new Object() // or var recipes = {}
 
 function updateObjectWithKeyAndValue(object, key, value) {  //  returns an object with the orignal key value pairs and the new key value pair
   return Object.assign({}, object, { [key]: value })        //  it does not modify the original object, but rather returns a clone with the new data
