@@ -1,19 +1,24 @@
-var recipes = new Object();
-
-function updateObjectWithKeyAndValue(object, key, value) {
-  return Object.assign({}, object, {[key]: value});
+let recipes = {
+  pizza: 1,
+  thai: 2,
+  burger: 3,
+  wings: 4,
 }
 
-function destructivelyUpdateObjectWithKeyAndValue(object, key, value) {
-  return Object.assign(object, {[key]: value});
+const updateObjectWithKeyAndValue = (obj, key, val) => {
+  return Object.assign({}, obj, {
+    [key]: val
+  })
 }
 
-function deleteFromObjectByKey(object, key) {
-  var preserve = Object.assign({}, object);
-  delete preserve[key];
-  return preserve;
+const destructivelyUpdateObjectWithKeyAndValue = (obj, key, val) => {
+  obj[key] = val;
+  return obj;
 }
 
-function destructivelyDeleteFromObjectByKey(object, key) {
-  return delete object[key];
+const deleteFromObjectByKey = (obj, key) => {
+  let copy =  Object.assign({}, obj);
+  return delete copy[key];
 }
+
+const destructivelyDeleteFromObjectByKey = (obj, key) => delete obj[key]
